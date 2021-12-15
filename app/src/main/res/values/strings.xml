@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RoomSQLiteDBJava</string>
+    <string name="title_sqlitedb">SqliteDb</string>
+    <string name="title_roomdb">RoomDb</string>
+</resources>
