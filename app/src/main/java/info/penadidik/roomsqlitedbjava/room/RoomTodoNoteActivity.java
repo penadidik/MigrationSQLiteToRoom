@@ -20,6 +20,7 @@ import java.util.Arrays;
 import info.penadidik.roomdb.RoomHandler;
 import info.penadidik.roomdb.Todo;
 import info.penadidik.roomsqlitedbjava.R;
+import info.penadidik.sqlitedb.SqlHelper;
 
 public class RoomTodoNoteActivity extends AppCompatActivity {
 
@@ -56,7 +57,7 @@ public class RoomTodoNoteActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        roomHandler = Room.databaseBuilder(getApplicationContext(), RoomHandler.class, "app_room_db").build();
+        roomHandler = Room.databaseBuilder(getApplicationContext(), RoomHandler.class, SqlHelper.DB_NAME).build();
 
         int todo_id = getIntent().getIntExtra("id", -100);
 

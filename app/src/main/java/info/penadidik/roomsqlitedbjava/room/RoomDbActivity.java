@@ -24,6 +24,7 @@ import java.util.List;
 import info.penadidik.roomdb.RoomHandler;
 import info.penadidik.roomdb.Todo;
 import info.penadidik.roomsqlitedbjava.R;
+import info.penadidik.sqlitedb.SqlHelper;
 
 public class RoomDbActivity extends AppCompatActivity implements RoomRecyclerViewAdapter.ClickListener, AdapterView.OnItemSelectedListener {
 
@@ -53,7 +54,7 @@ public class RoomDbActivity extends AppCompatActivity implements RoomRecyclerVie
         setContentView(R.layout.activity_roomdb);
 
         initViews();
-        roomHandler = Room.databaseBuilder(getApplicationContext(), RoomHandler.class, RoomHandler.DATABASE_NAME).fallbackToDestructiveMigration().build();
+        roomHandler = Room.databaseBuilder(getApplicationContext(), RoomHandler.class, SqlHelper.DB_NAME).fallbackToDestructiveMigration().build();
 
         spinner.setOnItemSelectedListener(this);
         spinner.setSelection(0);

@@ -29,6 +29,7 @@ import info.penadidik.roomdb.RoomHandler_Impl;
 import info.penadidik.roomdb.Todo;
 import info.penadidik.roomsqlitedbjava.R;
 import info.penadidik.sqlitedb.SqlHandler;
+import info.penadidik.sqlitedb.SqlHelper;
 import info.penadidik.sqlitedb.TodoSqlite;
 
 public class SqliteDbActivity extends AppCompatActivity implements SqliteRecyclerViewAdapter.ClickListener, AdapterView.OnItemSelectedListener {
@@ -61,7 +62,6 @@ public class SqliteDbActivity extends AppCompatActivity implements SqliteRecycle
         setContentView(R.layout.activity_sqlite);
 
         sqlHandler = new SqlHandler(getApplicationContext());
-        roomHandler = Room.databaseBuilder(getApplicationContext(), RoomHandler.class, RoomHandler.DATABASE_NAME).fallbackToDestructiveMigration().build();
         sqlHandler.open();
         initViews();
 
@@ -79,6 +79,7 @@ public class SqliteDbActivity extends AppCompatActivity implements SqliteRecycle
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                roomHandler = Room.databaseBuilder(getApplicationContext(), RoomHandler.class, SqlHelper.DB_NAME).fallbackToDestructiveMigration().build();
                 Log.d("Migration", "starting...");
                 ArrayList<Todo> todos = new ArrayList<>();
                 for(TodoSqlite item: sqlHandler.getAllRecord()){
