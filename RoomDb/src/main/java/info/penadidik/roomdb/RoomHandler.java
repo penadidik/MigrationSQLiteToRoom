@@ -10,7 +10,11 @@ import androidx.room.RoomDatabase;
 import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Todo.class}, version = 2, exportSchema = false)
+import info.penadidik.roomdb.relations.Dog;
+import info.penadidik.roomdb.relations.Owner;
+import info.penadidik.roomdb.relations.manytomany.DogOwnerCrossRef;
+
+@Database(entities = {Todo.class, Dog.class, Owner.class, DogOwnerCrossRef.class}, version = 1, exportSchema = false)
 public abstract class RoomHandler extends RoomDatabase {
 
     public abstract DaoAccess daoAccess();

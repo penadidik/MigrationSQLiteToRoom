@@ -11,13 +11,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import info.penadidik.roomsqlitedbjava.relationroom.RoomRelationActivity;
 import info.penadidik.roomsqlitedbjava.room.RoomDbActivity;
 import info.penadidik.roomsqlitedbjava.sqlite.SqliteDbActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnRoomDb;
-    Button btnSqliteDb;
+    Button btnRoomDb, btnSqliteDb, btnRoomRelation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnRoomDb = findViewById(R.id.btnRoomDb);
         btnSqliteDb = findViewById(R.id.btnSqliteDb);
+        btnRoomRelation = findViewById(R.id.btnRoomDbRelation);
 
         btnRoomDb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SqliteDbActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnRoomRelation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RoomRelationActivity.class);
                 startActivity(intent);
             }
         });

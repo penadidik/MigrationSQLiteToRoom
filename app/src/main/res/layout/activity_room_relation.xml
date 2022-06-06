@@ -17,23 +17,35 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnSqliteDb"
+            android:id="@+id/btnDog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Go To SqliteDB" />
+            android:text="Data Dog" />
 
         <Button
-            android:id="@+id/btnRoomDb"
+            android:id="@+id/btnOwner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="See Result Room" />
+            android:text="Data Owner" />
 
         <Button
-            android:id="@+id/btnRoomDbRelation"
+            android:id="@+id/btnRelation1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test Room Relation" />
+            android:text="One to one" />
+
+        <Button
+            android:id="@+id/btnRelation2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One to Many" />
+
+        <Button
+            android:id="@+id/btnRelation3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Many to many" />
 
     </LinearLayout>
 

@@ -9,6 +9,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     // Table Name
     public static final String TABLE_NAME = "todo";
     public static final String DB_NAME = "app_sqlite_db";
+    public static final String DB_NAME_ROOM = "app_room_db";
 
     // Table columns
     public static final String _ID = "id";

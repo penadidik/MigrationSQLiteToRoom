@@ -8,6 +8,8 @@
         <entry key="RoomDb/src/main/res/layout/content_todo_note.xml" value="0.24635416666666668" />
         <entry key="RoomDb/src/main/res/layout/recyclerview_item_layout.xml" value="0.24635416666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_room_relation.xml" value="0.18541666666666667" />
+        <entry key="app/src/main/res/layout/activity_roomdb.xml" value="0.18541666666666667" />
         <entry key="app/src/main/res/layout/activity_sqlite.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_todo_note.xml" value="0.13903985507246377" />
         <entry key="app/src/main/res/layout/recyclerview_item_layout.xml" value="0.1" />
